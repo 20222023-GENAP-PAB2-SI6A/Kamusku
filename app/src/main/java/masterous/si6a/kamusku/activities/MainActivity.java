@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Intent intent = new Intent(MainActivity.this, UpdateKamusActivity.class);
+                        intent.putExtra("EXTRA_KAMUS", data);
+                        startActivity(intent);
                     }
                 });
                 builder.show();
